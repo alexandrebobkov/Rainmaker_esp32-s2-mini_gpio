@@ -7,6 +7,10 @@
    CONDITIONS OF ANY KIND, either express or implied.
 
    View more examples View -> Command Palette -> ESP Project Examples -> Rainaker
+   SDL -> Green -> GPIO35
+   SDA -> Yellow -> GPIO33
+
+   PROV_a25587
 */
 
 #include <string.h>
@@ -63,7 +67,7 @@ void app_main()
     esp_rmaker_config_t rainmaker_cfg = {
         .enable_time_sync = false,
     };
-    esp_rmaker_node_t *node = esp_rmaker_node_init(&rainmaker_cfg, "ESP RainMaker Device", "GPIO-Device");
+    esp_rmaker_node_t *node = esp_rmaker_node_init(&rainmaker_cfg, "ESP RainMaker Device", "esp32 s2 mini foxie");
     if (!node) {
         ESP_LOGE(TAG, "Could not initialise node. Aborting!!!");
         vTaskDelay(5000/portTICK_PERIOD_MS);
@@ -71,7 +75,7 @@ void app_main()
     }
 
     /* Create a device and add the relevant parameters to it */
-    esp_rmaker_device_t *gpio_device = esp_rmaker_device_create("GPIO-Device", NULL, NULL);
+    esp_rmaker_device_t *gpio_device = esp_rmaker_device_create("esp32 s2 mini foxie", NULL, NULL);
     esp_rmaker_device_add_cb(gpio_device, write_cb, NULL);
 
     esp_rmaker_param_t *red_param = esp_rmaker_param_create("Red", NULL, esp_rmaker_bool(false), PROP_FLAG_READ | PROP_FLAG_WRITE);
