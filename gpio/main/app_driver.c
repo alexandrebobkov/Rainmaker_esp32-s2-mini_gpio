@@ -1,10 +1,8 @@
-/* Simple GPIO Demo
+/* ESP Rainmaker
+
+   Simple GPIO Demo
    
    This example code is in the Public Domain (or CC0 licensed, at your option.)
-
-   Unless required by applicable law or agreed to in writing, this
-   software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-   CONDITIONS OF ANY KIND, either express or implied.
 */
 
 #include <sdkconfig.h>
@@ -27,6 +25,7 @@
 #define WIFI_RESET_BUTTON_TIMEOUT       3
 #define FACTORY_RESET_BUTTON_TIMEOUT    10
 
+// GPIOs 
 esp_err_t app_driver_set_gpio(const char *name, bool state)
 {
     if (strcmp(name, "Red") == 0) {
