@@ -1063,3 +1063,5 @@
 166762	167267	7260615411859341	C:/Users/alex/github/Rainmaker_esp32-s2-mini_gpio/gpio/build/.bin_timestamp	55c82b7acc930aac
 167268	167436	0	esp-idf/esptool_py/CMakeFiles/app_check_size	816ccb0a8a3d6a63
 167268	167436	0	C:/Users/alex/github/Rainmaker_esp32-s2-mini_gpio/gpio/build/esp-idf/esptool_py/CMakeFiles/app_check_size	816ccb0a8a3d6a63
+1	1121908	0	CMakeFiles/confserver	f83af298154fe438
+1	1121908	0	C:/Users/alex/github/Rainmaker_esp32-s2-mini_gpio/gpio/build/CMakeFiles/confserver	f83af298154fe438
